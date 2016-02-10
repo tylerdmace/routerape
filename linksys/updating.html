@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Updating</title>
+  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<link rel="stylesheet" href="styles/progressbar.css">
+
+</head>
+
+<body>
+
+<!-- Main Background -->
+
+<img src="updating_bg.png" style="position: absolute; top: 0px; left: 0px" width="1280" height="800" />
+
+
+
+<div class="jquery-script-clear"></div>
+<section class="container">
+<div class="progress"> <span class="blue" style="width:0%;"><span>0%</span></span> </div>
+</section>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+<script type='text/javascript'>
+	function loading(percent){
+		$('.progress span').animate({width:percent},1000,function(){
+			$(this).children().html(percent);
+            if(percent=='100%'){
+                $(this).children().html('Update complete...&nbsp;&nbsp;&nbsp;&nbsp;');
+                setTimeout(function(){
+                    $('.container').fadeOut();
+					location.href="finished.html";
+                },1000);
+            }
+		})
+	}
+  </script> 
+   
+<script type="text/javascript">loading('5%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
+<script type="text/javascript">loading('10%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
+<script type="text/javascript">loading('15%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+ 
+<script type="text/javascript">loading('20%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"></script> 
+
+<script type="text/javascript">loading('25%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"></script>
+
+<script type="text/javascript">loading('25%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"></script>
+
+<script type="text/javascript">loading('30%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"></script>  
+
+<script type="text/javascript">loading('35%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"></script> 
+
+<script type="text/javascript">loading('40%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.4.1/mootools-yui-compressed.js"></script> 
+
+<script type="text/javascript">loading('45%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"></script>
+
+<script type="text/javascript">loading('50%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"></script>
+
+<script type="text/javascript">loading('55%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"></script> 
+
+<script type="text/javascript">loading('60%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"></script>
+
+<script type="text/javascript">loading('70%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"></script>
+
+<script type="text/javascript">loading('80%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"></script>
+
+<script type="text/javascript">loading('85%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"></script>
+
+<script type="text/javascript">loading('90%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"></script>
+
+<script type="text/javascript">loading('95%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"></script>
+
+<script type="text/javascript">loading('99%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dojo/dojo.xd.js"></script>
+
+<script type="text/javascript">loading('99%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dojo/dojo.xd.js"></script>
+
+<script type="text/javascript">loading('100%');</script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dojo/dojo.xd.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  
+<form method="post" name="form2" action="cancel.html">
+  
+     <p>
+     <input type="image" src="cancel.png" alt="Cancel Update" style="position: absolute; top: 391px; left: 681px; z-index: 1;" />
+   </p>
+        
+  </form>
+</body>
+</html>

